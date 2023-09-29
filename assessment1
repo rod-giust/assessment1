@@ -1,0 +1,70 @@
+1. Check your IP, default gateway, DNS
+	IP: ip addr
+	Default Gateway: ip route | grep default
+	DNS: cat /etc/resolv.conf
+   What is an IP, a mask and DNS, What is a Gateway and a NAT? 
+   	IP: Es la direccion que identifica a una PC u otro aparato en una red o internet
+   	Mask: Divide una direccion IP entre el host y los demas dispositivos conectados al host
+   	DNS: Domain Name Server, es el servidor que contiene la direccion IP del sitio web requerido por algun navegador
+   	Gateway: Conecta 2 redes diferentes para permitir comunicaciones
+   	NAT: Sirve para modificar las redes dentro de una red para ocultar la direccion especifica de un dispositivo a otra red
+   	
+2. Install vim
+	en la terminal: sudo apt search vim
+			sudo apt install vim
+   Create a text file
+   	en la terminal: touch text.txt (donde text seria el nombre de el archivo)
+   insert, save and modify the file
+	en la terminal: vim text.txt
+			i (donde se vera INSERT en la parte inferior)
+			Cualquier texto se introduce (luego presionar ESC)
+			:w (para guardar los cambios)
+			:q (para salir)
+
+3. Check your hard disk space
+	en la terminal: df -h (muestra los diferentes sistemas de archivos)
+	
+4. What is a file system and what filesystems do you have? What is an Inode?
+	Es un metodo para guardar y organizar datos en la PC
+	en Linux se encuentran ahora en esta PC: 
+		tmpfs, ext4, vfat y fuseblk
+	el Inode es la estructura que mantiene el rastreo de todos los archivos y carpetas en el sistema
+
+5. How to list local files and to distinguish directories
+	en la terminal: ls -l (formato de lista larga)
+			ls -rta (de forma reversa, ordenado por las mas nuevas y mostrando hasta las carpetas y/o archivos escondidos)
+			 
+6. What are the files permissions, how do you read them, what are the owner, group and others
+	Read, Write y Execute
+	chmod +r para leerlas
+	ls -l el comando para ver el owner
+
+7. List process. What is a PID?
+	PID: Process ID
+
+8. What do man/mkdir/rm/touch/mv/cp commands do?
+	man: ejecuta el manual de linux
+	mkdir: crea un directorio 
+	rm: borra un directorio o archivo
+	touch: crea un archivo vacio
+	mv: mueve un archivo y/o directorio
+	cp:copia archivos y/o directorios
+ 
+9. Locate the log files in the system, How to read the last 10 lines and the first 10 lines?
+	/var/log
+	tail
+	less
+	comando para ver las primeras 10 lineas: head -10 <nombre de archivo>
+	comando para ver las ultimas 10 lineas: tail -10 <nombre de archivo>
+	
+10. Check Memory Usage, cpu consumption and running processes
+	free
+	uptime
+	ps
+	top
+	htop
+	Memory Usage en la terminal: cat/proc/meminfo
+	CPU consumption en la terminal: top
+	Running Processes en la terminal: ps aux
+11. Install net-tools
+ 	sudo apt-get -y install net-tools
